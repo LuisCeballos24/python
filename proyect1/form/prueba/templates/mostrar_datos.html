@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Datos de Persona y Auto</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Datos de Persona y Auto</h1>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Edad</th>
+                    <th>Teléfono</th>
+                    <th>Dirección</th>
+                    <th>Marca del Auto</th>
+                    <th>Modelo del Auto</th>
+                    <th>Placa del Auto</th>
+                    <th>Vencimiento de la Placa</th>
+                    <th>Año del Carro</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for persona, auto in datos_combinados %}
+                <tr>
+                    <td>{{ persona.nombre }}</td>
+                    <td>{{ persona.edad }}</td>
+                    <td>{{ persona.telefono }}</td>
+                    <td>{{ persona.direccion }}</td>
+                    <td>{{ auto.marca }}</td>
+                    <td>{{ auto.modelo }}</td>
+                    <td>{{ auto.placa }}</td>
+                    <td>{{ auto.vencimiento_placa }}</td>
+                    <td>{{ auto.año_carro }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
